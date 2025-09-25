@@ -6,7 +6,6 @@ from controllers.add_numbers import add_numbers
 
 
 def application(environ, start_response):
-    print('Check')
     path = environ.get("PATH_INFO", "/")
     method = environ["REQUEST_METHOD"]
     headers = [("Content-Type", "text/html; charset=utf-8")]
@@ -19,6 +18,9 @@ def application(environ, start_response):
 
     elif path == "/greeting":
         body = greet_with_time()
+
+    elif path == "/calc":
+        body = add_numbers(environ)
 
     else:
         start_response("404 Not Found", headers)
