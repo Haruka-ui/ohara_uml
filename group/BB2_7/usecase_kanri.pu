@@ -1,0 +1,43 @@
+@startuml
+left to right direction
+actor "管理者" as a1
+
+rectangle {
+    usecase "01 管理アカウント登録" as account
+    usecase "02 管理アカウント削除" as del_account
+    usecase "03 管理者パスワード更新" as change_pass
+    usecase "04 ログイン" as login 
+    usecase "05 ログアウト" as logout 
+    usecase "06 ユーザー追加" as add_user
+    usecase "07 ユーザー削除" as del_user
+    usecase "08 商品追加" as add_product
+    usecase "09 商品削除" as del_product
+    usecase "10 商品価格更新" as change_price
+    usecase "11 商品在庫更新" as change_nokori
+    usecase "12 注文一覧" as disp_order
+    usecase "13 注文削除" as del_order
+    usecase "14 返品一覧表示" as cooling
+    usecase "15 返品/送金処理" as deal_cooling
+    usecase "16 お問い合わせ一覧" as disp_mail
+    usecase "17 出荷処理" as donadona
+}
+
+a1 --> account
+a1 --> del_account
+a1 --> login
+a1 --> logout
+a1 --> add_user
+a1 --> del_user
+a1 --> add_product
+a1 --> del_product
+a1 --> change_price
+a1 --> change_nokori
+a1 --> disp_order
+a1 --> del_order
+a1 --> cooling
+a1 --> deal_cooling
+a1 --> disp_mail
+a1 --> donadona
+
+
+@enduml

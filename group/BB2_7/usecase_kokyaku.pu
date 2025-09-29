@@ -1,0 +1,38 @@
+@startuml
+left to right direction
+actor "ユーザー" as user 
+
+rectangle {
+    usecase "01 アカウント新規登録" as add_account
+    usecase "02 アカウント削除" as del_account
+    usecase "03 アカウント情報更新" as update_info
+    usecase "04 ログイン" as login
+    usecase "05 ログアウト" as logout
+    usecase "06 商品一覧表示" as view
+    usecase "07 商品詳細表示" as view_detail
+    usecase "08 商品注文" as buy
+    usecase "09 支払い" as pay
+    usecase "10 クレジットカード新規登録" as add_card
+    usecase "11 クレジットカード情報更新" as update_card
+    usecase "12 クレジットカード情報削除" as del_card
+    usecase "13 配送状況確認" as view_deli
+    usecase "14 返品申請" as coolingoff
+    usecase "15 お問い合わせ送信" as send_mail
+}
+
+user --> add_account
+user --> del_account
+user --> update_info
+user --> login
+user --> logout
+user --> view
+user --> view_detail
+user --> buy
+user --> add_card
+user --> update_card
+user --> del_card
+user --> view_deli
+user --> coolingoff
+user --> send_mail
+user --> pay
+@enduml
